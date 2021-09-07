@@ -15,6 +15,35 @@ The table schema, with a) each column name (make sure to include all columns for
 
 A few sample rows from the table Include a statement about whether the comments on your tables and columns are official from the data sources, or are yourown determination about the data. (In this case, you are providing comments based on your initial investigation of the data. In a real world setting you may obtain some comments officially from the data originators.)
 
+# Assignment 2: Analyzing Big Data with SQL
+
+Your job is to recommend which pair of United States airports should be connected with a high-speed passenger rail tunnel. The company you work for has given you the following strict requirements:
+
+These two airports must:
+
+Be between 300 and 400 miles apart
+Average at least 5,000 (five thousand) flights per year between them, in each direction
+Among the pairs of airports that meet these requirements, you must identify the one pair that has the largest total number of seats on the planes that flew between them.
+
+The company is also interested to know the average arrival delay for flights between these two airports, because they believe that routes with a history of delayed arrivals will make it easier to persuade air travelers to switch to high-speed rail.
+
+For the pair of airports you recommend, you must provide the following details:
+
+The three-letter codes identifying both airports
+The average flight distance in miles for flights between the airports, in each direction
+The average number of flights per year between the airports, in each direction
+The average annual passenger capacity (average yearly total number of seats on the planes) for flights between the airports, in each direction
+The average arrival delay for flights between the airports, in each direction
+
+You must write a SELECT statement to identify the pair of airports that fulfills all the requirements listed above. This SELECT statement must also return all the required details listed above.
+
+The following hints might help you:
+
+The flights table has a column named distance which gives the distance in miles of each flight. Use the values in this column as the distances between airports.
+The planes table contains ten years of flights data, so to get per-year (annual) average totals, divide the full-table totals by ten.
+The planes table has a column named seats which gives the number of seats on each plane.
+The first two rows in the result of your query should show your recommended tunnel route. These top two rows should both show the same pair of airports, but with the origin and dest switched.
+
 # Assignment 3: Managing Big Data in Clusters and Cloud Storage
 
 Use the commands you learned about in this course to list and examine the three files containing the tunnel boring machine data. They are delimited text files, each containing tens of thousands of lines. They are stored in Amazon S3 in subdirectories under a directory named tbm_sf_la in the S3 bucket named training-coursera2. You have read access to this bucket.
